@@ -23,11 +23,11 @@ import { searchNews, append, searchNewsCountry } from "./fetch.js";
 let countries = document.querySelector("#sidebar").children;
 
 function cSearch() {
-    window.location.href = 'news.html';
+    // window.location.href = 'news.html';
     console.log(this.id);
     searchNewsCountry(this.id).then((data) => {
         console.log(data);
-        append(data, document.querySelector('#detailed_news'));
+        append(data, document.querySelector('#results'));
     })
 }
 
